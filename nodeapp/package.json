@@ -1,0 +1,14 @@
+{
+  "name": "hello-atari",
+  "version": "1.0.0",
+  "description": "Simple examples of using Chia Data Layer",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "author": "Josh Painter",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
