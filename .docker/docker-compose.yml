@@ -4,7 +4,7 @@ services:
   hello-atari:
     image: hello-atari
     build:
-      context: nodeapp
+      context: ../nodeapp
     environment:
       NODE_ENV: production
     ports:
