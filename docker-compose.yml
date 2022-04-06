@@ -18,6 +18,8 @@ services:
     image: ghcr.io/chia-network/chia:atari
     ports:
       - 8444:8444
+      - 8561:8561
+      - 8000:8000
     environment:
       - keys=generate
       - TZ=${TZ}
