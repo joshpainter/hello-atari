@@ -3,7 +3,7 @@ services:
   hello-atari:
     image: hello-atari
     build:
-      context: ../nodeapp
+      context: nodeapp
     environment:
       NODE_ENV: production
     ports:
@@ -20,15 +20,12 @@ services:
       - 8561:8561
       - 8000:8000
     environment:
-      - keys=generate
-      - TZ=${TZ}
-      # Enable UPnP
+      - keys=persistent
       - upnp=false
-      # Enable log file generation
       - log_to_file=true
+      - service=node
     volumes:
-      - ~/.chia/mainnet/db:/root/.chia/mainnet/db
-      - ~/.chia/mainnet/data_layer:/root/.chia/mainnet/data_layer
+      - ~/.chia-atari:/root/.chia
       - chia-ssl:/root/.chia/mainnet/config/ssl
 volumes:
   chia-ssl:
